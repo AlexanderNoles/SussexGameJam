@@ -176,7 +176,7 @@ public class RepairScreenManagement : MonoBehaviour
             }
             else if(currentReciever != null)
             {
-                if(InputManagement.GetMouseButtonDown(0))
+                if(!InputManagement.GetMouseButton(0))
                 {
                     ResetCurrentLineDrawer();
                 }

@@ -59,6 +59,8 @@ public class MovementOutput : GridObject
                 //Rotatational Movement
                 RepairScreenManagement.UpdateRotationalKey((int)outputToChange - 4, RepairScreenManagement.NullInput);
             }
+
+            target = null;
         }
     }
 }

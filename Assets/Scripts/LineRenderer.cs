@@ -26,11 +26,7 @@ public class LineRenderer : MonoBehaviour
 
             prePath[i].position = positions[i];
 
-            Vector3 directionTo = previousPos - prePath[i].position;
-            float angle = Mathf.Atan2(directionTo.y, directionTo.x) * Mathf.Rad2Deg;
-            prePath[i].rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            previousPos = prePath[i].position;
+            previousPos = prePath[i].position;   
         }
 
         if(i < prePath.Count)

@@ -18,4 +18,9 @@ public class InputManagement
     {
         return Input.GetMouseButtonDown(mouseIndex);
     }
+
+    public static bool GetMouseButton(int mouseIndex)
+    {
+        return Input.GetMouseButton(mouseIndex);
+    }
 }
