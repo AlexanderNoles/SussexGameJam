@@ -41,7 +41,7 @@ public class TransitionManagement : MonoBehaviour
         if(introTransitionT > 0.0f)
         {
             introTransitionT -= Time.deltaTime * transitionSpeed;
-            UpdateLogo(Mathf.Clamp01(introTransitionT));
+            UpdateLogo(Mathf.Clamp01(introTransitionT / 2.0f));
 
             swipeRect.offsetMin = new Vector2(Mathf.Lerp(Screen.width, 0.0f, introTransitionT), 0.0f);
 
@@ -55,7 +55,7 @@ public class TransitionManagement : MonoBehaviour
         if(!OutroFinished())
         {
             outroTransitionT -= Time.deltaTime * transitionSpeed;
-            UpdateLogo(outroTransitionT);
+            UpdateLogo(outroTransitionT / 2.0f);
 
             swipeRect.offsetMax = new Vector2(Mathf.Lerp(0.0f, -Screen.width, outroTransitionT), 0.0f);
         }

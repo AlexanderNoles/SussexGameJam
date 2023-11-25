@@ -12,15 +12,26 @@ public class GameManagement : MonoBehaviour
 
     public static void RestartLevel()
     {
+        if(loadLevel)
+        {
+            return;
+        }
+        Destroy(PlayerInteractionControl._instance);
         levelToLoad = SceneManager.GetActiveScene().buildIndex;
         TransitionManagement.PlayOutro();
+        AudioManagement.PlaySound("Restart");
         loadLevel = true;
     }
 
     public static void WonLevel()
-    {
+    {        
+        if(loadLevel)
+        {
+            return;
+        }
         levelToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         TransitionManagement.PlayOutro();
+        AudioManagement.PlaySound("Win");
         loadLevel = true;
     }
 

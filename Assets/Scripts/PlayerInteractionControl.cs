@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInteractionControl : MonoBehaviour
 {
+	public static GameObject _instance;
+
 	public float velSpeed = 5.0f;
 	public float maxRotationSpeed = 50.0f;
 	private float currentRotationSpeed;
@@ -20,6 +22,7 @@ public class PlayerInteractionControl : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 		gravity = maxGravity;
+		_instance = gameObject;
 	}
 
 	private void Update() 

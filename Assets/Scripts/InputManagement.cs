@@ -8,4 +8,14 @@ public class InputManagement
     {
         return inputKey != KeyCode.Alpha0 && Input.GetKey(inputKey);
     }
+
+    public static bool GetKeyDown(KeyCode inputKey)
+    {
+        return Input.GetKeyDown(inputKey);
+    }
+
+    public static bool GetMouseButtonDown(int mouseIndex)
+    {
+        return Input.GetMouseButtonDown(mouseIndex);
+    }
 }
