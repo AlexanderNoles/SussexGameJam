@@ -51,6 +51,15 @@ MonoBehaviour:
   - name: Restart
     actualSound: {fileID: 8300000, guid: 6f5315f0111f67144944d3fed937a481, type: 3}
     volume: 5
+  - name: Blip
+    actualSound: {fileID: 8300000, guid: f2420c586be73704c94e58aaf10dfb50, type: 3}
+    volume: 3
+  - name: Completed
+    actualSound: {fileID: 8300000, guid: 4ffb7eefc2ea8c34795366c3df75e079, type: 3}
+    volume: 1
+  - name: Lasered
+    actualSound: {fileID: 8300000, guid: 6d5080315d4c930419b5c87748a67ded, type: 3}
+    volume: 1
   jukeBox: {fileID: 123669860255438020}
   music:
   - name: MainTheme

@@ -198,6 +198,7 @@ public class RepairScreenManagement : MonoBehaviour
                             if(positionToOutputs.ContainsKey(position))
                             {
                                 //Notify reciever of connection
+                                AudioManagement.PlaySound("Completed");
                                 currentReciever.NotiftyOfMovementOutput(positionToOutputs[position]);
 
                                 currentReciever = null;
@@ -225,6 +226,7 @@ public class RepairScreenManagement : MonoBehaviour
                             else
                             {
                                 //If not a fail state add position to current line
+                                AudioManagement.PlaySound("Blip");
                                 currentReciever.AddPositionToLine(position);
                                 lastPositionAdded = position;
                             }

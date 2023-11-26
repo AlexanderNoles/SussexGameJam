@@ -33,7 +33,7 @@ public class AudioManagement : MonoBehaviour
 
     private void Awake() {
         _instance = this;
-        PlayMusic("MainTheme");
+        //PlayMusic("MainTheme");
     }
 
     private void LateUpdate() {
